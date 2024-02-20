@@ -4,6 +4,16 @@ The project is designed to find users who contribute well to open source from a 
 
 For example, the project's SDK makes it easy to build a system that connects wallets to Ethereum and distributes them to contributors.
 
+## Incorporate a reward system
+
+This system displays metrics such as how much contributors have committed, whether pull requests have been merged, the extent of the project's impact, and the type of contributions using machine learning. Based on its content, the reward system allows SDK users to design their own reward systems based on their criteria.
+
+For example, it aims to identify and utilize users who have made significant contributions in specific languages or technical fields, such as users who have made significant contributions in a particular language, or contributors to top OSS projects on GitHub.
+
+By adopting this system, it is possible to promote contributions to OSS further by opening project waitlists for contributors in specific fields or by granting credits that can be used within the service.
+
+[Start using TypeScript SDK →](./packages/sdk)
+
 ## Reference
 
 This project is based on the following papers and projects
