@@ -1,0 +1,12 @@
+[package]
+name = "git-loc-analyzer"
+version = "0.1.0"
+edition = "2021"
+description = "Rust-based CLI tool that analyzes the lines added and deleted in each commit of a Git repository and reports the total number of changed lines for each user."
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+git2 = "0.18.3"
+chrono = "0.4.35"
