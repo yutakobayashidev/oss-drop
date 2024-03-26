@@ -5,6 +5,7 @@ use std::{collections::HashMap, path::Path};
 enum AnalyzeError {
     Git(GitError),
     Io(std::io::Error),
+    NotInRepo,
 }
 
 impl From<GitError> for AnalyzeError {
@@ -48,7 +49,12 @@ fn analyze_repo(repo_path: &Path) -> Result<HashMap<String, usize>, AnalyzeError
 
 fn main() -> Result<(), AnalyzeError> {
     let current_dir = std::env::current_dir()?;
-    match analyze_repo(&current_dir) {
+    let repo = match Repository::discover(&current_dir) {
+        Ok(repo) => repo,
+        Err(_) => return Err(AnalyzeError::NotInRepo),
+    };
+
+    match analyze_repo(repo.path()) {
         Ok(user_loc) => {
             for (user, loc) in user_loc {
                 println!("{}: {} lines", user, loc);
