@@ -15,13 +15,9 @@ The purpose of this project is to provide insights into the contributions of ind
 2. Ensure that the Rust environment is set up.
 3. Build the program by running the following command in the command line:
 
-    ```bash
-    cargo build --release
-    ```
-
-## Configuration
-
-There are no additional configuration options at this time.
+```bash
+cargo run --release -- --start-date 2023-01-01 --end-date 2023-12-31
+```
 
 ## License
 
